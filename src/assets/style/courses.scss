@@ -1,0 +1,186 @@
+@charset "utf-8";
+@import "base";
+
+/*
+ * 课程介绍
+ */
+
+/* pc样式 */
+
+/*页面头部背景图*/
+.pc-course {
+  height: $pc-height;
+  @include bg-lazy-loading;
+
+}
+
+.phone-course {
+  height: $phone-height;
+  @include bg-lazy-loading;
+}
+
+@font-face {
+  font-family: PangMenZhengDao;
+  src: url(http://static.officialsite.shapejoy.com/fonts/PangMenZhengDao.ttf);
+}
+
+/* 课程部位 */
+main .pc-course-box {
+  width: 100%;
+  margin-top: 0.3rem;
+  .pc-course-list {
+    padding: 0 3.5rem;
+  }
+}
+
+/*
+ *课程分类
+ */
+
+main .pc-course-covers-list {
+  margin: 0.5rem auto 0;
+  display: flex;
+  flex-flow: row wrap;
+  a {
+    width: 48%;
+    height: 3.35rem;
+    margin-top: 0.4rem;
+    margin-right: 4%;
+    overflow: hidden;
+    cursor: pointer;
+    background: #ccc no-repeat center;
+    background-size: cover;
+    position: relative;
+    transition: transform .5s, box-shadow .5s;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:hover {
+      transform: translateY(-.05rem);
+      box-shadow: 0 .1rem .2rem 0 rgba(0, 0, 0, .3);
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .3);
+        left: 0;
+        top: 0;
+      }
+      div {
+        color: $nav-title;
+      }
+    }
+    div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.3rem;
+      font-style: italic;
+      font-weight: bold;
+      color: transparent;
+    }
+  }
+}
+
+/* 更多神秘课程 */
+main .more-courses {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  p {
+    color: #C1C1C1;
+    letter-spacing: 0.05rem;
+    font-size: 0.3rem;
+    font-family: "SimHei";
+    line-height: 0.5rem;
+  }
+}
+
+/* 手机样式 */
+main .phone-course-box {
+  height: 1.92rem;
+  width: 100%;
+  border-bottom: #7A7A7A solid 0.02rem;
+  .phone-course-classification {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    li {
+      position: relative;
+      text-align: center;
+      line-height: 1.92rem;
+      flex: 1;
+      color: #6D6D6D;
+      //font-family: "SourceHanSansCN-Medium";
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.04rem;
+      &:after {
+        position: absolute;
+        height: 0.14rem;
+        width: 1rem;
+        bottom: -0.6rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $nav-title;
+      }
+      &.phone-course-line {
+        color: $nav-title;
+        &:after {
+          content: '';
+        }
+      }
+    }
+  }
+}
+
+/* 手机课程封面 */
+.phone-course-cover-list {
+  height: auto;
+  width: 100%;
+  margin-top: 1.2rem;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 92%;
+    height: 4rem;
+    margin: 0.32rem auto 0;
+    background: #ccc no-repeat center;
+    background-size: cover;
+    position: relative;
+    div {
+      position: absolute;
+      display: inline-block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: bold;
+    }
+  }
+}
+
+/* 手机查看更多课程 */
+main .phone-more-courses {
+  margin-top: 1rem;
+  width: 100%;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  p {
+    color: #C1C1C1;
+    font-family: "SimHei", serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.02rem;
+    line-height: 0.8rem;
+    height: 0.8rem;
+  }
+}
+

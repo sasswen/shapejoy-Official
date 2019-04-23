@@ -1,0 +1,102 @@
+$version: "?v1.0";
+$base-color: #343332;
+$base-bgColor: red;
+$pc-height: 8rem;
+$phone-height: 12rem;
+$stripe-bg: #E9E9E9;
+$nav-title: #FDB801; //底纹背景
+
+@mixin bg($url,$x:center,$y:center) {
+  background: url(#{($url+$version)}) no-repeat $x $y;
+  background-size: cover;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin bg-lazy-loading {
+  background:no-repeat center center;
+  background-size: cover;
+}
+
+@mixin stripe {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  background: $stripe-bg;
+}
+
+@mixin mediaIcon {
+  position: relative;
+  z-index: 99;
+  width: .4rem;
+  height: .4rem;
+  background-size: cover;
+}
+
+@mixin m-mediaIcon {
+  position: relative;
+  z-index: 99;
+  width: 2rem;
+  height: 2rem;
+  background-size: cover;
+}
+
+@mixin iconHover {
+  .cls-2 {
+    fill: #E3BA4F;
+  }
+}
+
+@mixin hoverImg {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border: .03rem solid #E3BA4F;
+  left: -85%;
+  top: -1.2rem;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0.9rem;
+    left: 0.4rem;
+    padding: .05rem;
+    background: #F2F2F1;
+    border: inherit;
+    border-left: 0;
+    border-top: 0;
+    transform: rotate(45deg);
+  }
+}
+
+@mixin m-hoverImg {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border: .07rem solid #E3BA4F;
+  left: -50%;
+  top: -4.5rem;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 3.61rem;
+    left: 1.6rem;
+    padding: .25rem;
+    background: transparent;
+    border: inherit;
+    border-left: 0;
+    border-top: 0;
+    transform: rotate(45deg);
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0.7rem;
+    height: .09rem;
+    background: #F2F2F1;
+    top: 3.84rem;
+    left: 1.52rem;
+  }
+
+}

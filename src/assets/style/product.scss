@@ -1,0 +1,21 @@
+@charset "utf-8";
+@import "base";
+
+#product {
+  width: 100%;
+  background: #000000;
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  .pc-product-header {
+    width: 100%;
+    height: $pc-height;
+  }
+  .pc-wrapper img {
+    width:80%;
+  }
+}
+
+
+

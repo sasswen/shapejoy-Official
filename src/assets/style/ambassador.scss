@@ -1,0 +1,38 @@
+@charset "utf-8";
+@import "base";
+
+#ambassador {
+    height: auto;
+    width: 100%;
+}
+
+.pc-ambassador-header {
+    height: $pc-height;
+    @include bg-lazy-loading;
+}
+.pc-ambassador-title{
+  margin-top: 0.3rem;
+}
+.pc-ambassador{
+  width: 100%;
+  height: 12.5rem;
+  margin-top: 1rem;
+  background-size: cover;
+}
+
+.phone-ambassador-header {
+    height: $phone-height;
+    @include bg-lazy-loading;
+}
+.phone-ambassador-title{
+  margin-top: 0.6rem;
+  .pc-course-classification{
+    li{
+      font-size: 0.8rem;
+      &:after{
+        width: 1.2rem;
+      }
+    }
+  }
+}
+

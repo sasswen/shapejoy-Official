@@ -1,0 +1,369 @@
+@charset "utf-8";
+@import "base";
+
+$mt: 15vh; //margin-top
+$job-color: #FDB801; //职位的字体颜色
+$job-indent: 0.5rem; //职位的缩进
+$job-ht: 0.5rem; //职位div的高度
+
+/*公用样式*/
+.container {
+  width: inherit;
+  margin-top: -0.8rem;
+  .row {
+    .stripe {
+      width: inherit;
+      @include stripe;
+      margin-top: 1.2rem;
+    }
+    .stripe1 {
+      width: inherit;
+      @include stripe;
+      margin-top: 0.8rem;
+    }
+    .col-md-6 {
+      margin: -0.8rem 0.5rem 0 -0.5rem;
+      padding: 0 1rem;
+      .recruit-title {
+        @include stripe;
+        font-size: 0.27rem;
+        font-weight: bold;
+      }
+      .recruit-content {
+        font-size: 0.25rem;
+        line-height: 0.4rem;
+        .advantage {
+          color: $job-color;
+          margin: 0.2rem 0;
+        }
+        .bd-left {
+          border-left: 1px solid $job-color;
+          padding-left: 0.1rem;
+          margin-bottom: 0.1rem;
+        }
+      }
+    }
+
+  }
+}
+
+
+
+//pc端背景图
+.pc-join {
+  height: $pc-height;
+  @include bg-lazy-loading;
+}
+
+.pc-recruit {
+  @include center;
+  width: 100%;
+  .join-header-bg {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: $mt;
+    // @include bg('../img/join-us/pc/pc-join-header.jpg');
+    height: 5.3rem;
+    @include bg-lazy-loading;
+  }
+  .join-benefit-bg {
+    width: 15%;
+    margin-left: 45%;
+    margin-top: $mt;
+    // @include bg('../img/join-us/pc/pc-benefit.png');
+    height: 1rem;
+    @include bg-lazy-loading;
+    opacity: 0.99;
+    z-index: 5;
+  }
+  .join-benefit {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: -0.1rem;
+    padding: 0.5rem;
+    background: #E9E9E9;
+    .gift-padding {
+      width: 30%;
+      height: 5rem;
+      padding: 0.3rem;
+      background: #ffffff;
+      @include center;
+      .gift {
+        width: 100%;
+        // @include bg('../img/join-us/pc/pc-gift.jpg');
+        height: 4.6rem;
+        @include bg-lazy-loading;
+      }
+    }
+    .benefit-text {
+      @include center;
+      text-align: center;
+      width: 50%;
+      height: 5rem;
+      font-size: 0.25rem;
+      background: #F3CF70;
+      p {
+        line-height: 0.5rem;
+      }
+      .benefit-focus {
+        font-size: 0.4rem;
+      }
+    }
+  }
+  .job-content {
+    width: 100%;
+    .job-wrap {
+      position: relative;
+      margin-top: 0.9rem;
+      width: 76%;
+      margin-left: 12%;
+      .recruit-job {
+        height: $job-ht;
+        line-height: $job-ht;
+        background: $job-color;
+        font-size: 0.3rem;
+        text-indent: $job-indent;
+      }
+      .recruit-category {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        height: $job-ht;
+        line-height: $job-ht;
+        font-size: 0.3rem;
+        text-indent: $job-indent;
+        margin-top: 0.2rem;
+        .category-item {
+          width: 22%;
+          background: $job-color;
+          margin-right: 0.5rem;
+          position: relative;
+        }
+        .active {
+          background: #000;
+          color: #ffffff;
+          &:after {
+            content: "";
+            position: absolute;
+            border: 12px solid #000000;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            top: 0.5rem;
+            /*让三角形居中*/
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+
+      .job-page{
+        padding-top: .3rem;
+        .job-row{
+          display: block;
+          .job-item{
+            float: left;
+            width: 50%;
+            margin-top: .3rem;
+            text-align: left;
+            .job-title{
+              height: 0.8rem;
+              line-height: 0.8rem;
+              background: #E9E9E9;
+              font-size: 0.27rem;
+              font-weight: bold;
+              padding-left: .4rem;
+            }
+            .job-conntent{
+              padding: 0 .4rem;
+              font-size: 0.25rem;
+              line-height: .4rem;
+              .job-content-title {
+                color: $job-color;
+                margin: .2rem 0;
+              }
+              .job-content-list {
+                border-left: 1px solid $job-color;
+                padding-left: 0.1rem;
+                p {
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//手机端背景图
+.m-join {
+  // @include bg('../img/phone-img/phone-join-us.jpg');
+  height: $phone-height;
+  @include bg-lazy-loading;
+}
+
+$left: 5%;
+$section-top: 0.5rem;
+$img-top: 1rem;
+main {
+  @media (max-width: 1200px) {
+    h4 {
+      font-size: 0.9rem;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+    text-align: center;
+    .mobile-if-you-word-box p:nth-child(1),
+    .mobile-if-you-word-box p:nth-child(3),
+    .mobile-if-you-word-box p:nth-child(5),
+    .mobile-if-you-word-box p:nth-child(7) {
+      text-align: center;
+      margin-left: 0;
+    }
+
+    .job img, .recruitment img {
+      margin-top: 1rem;
+      height: auto;
+      width: 80%;
+    }
+
+    .ring img {
+      display: inline-block;
+      height: 2.5rem;
+      width: 3rem;
+    }
+    p {
+      margin-top: 0.2rem;
+    }
+    .mobile-header-word-box {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .mobile-train-line {
+      width: 100%;
+      margin-top: .8rem;
+    }
+    .mobile-train-line div {
+      // @include bg('../img/join-us/mobile/train.png');
+      height: 1rem;
+      @include bg-lazy-loading;
+      width: 90%;
+      margin-left: 5%;
+    }
+    .mobile-if-you-word-box, .mobil-now {
+      text-align: center;
+      margin-top: $section-top;
+    }
+    .mobile-if-you-word-box p:nth-child(1),
+    .mobile-if-you-word-box p:nth-child(3),
+    .mobile-if-you-word-box p:nth-child(5),
+    .mobile-if-you-word-box p:nth-child(7) {
+      margin-left: -75%;
+    }
+    .ring, .grass, .mobile-star {
+      text-align: center;
+      border: #fff solid 0;
+      width: 100%;
+      margin-top: $img-top;
+    }
+    .ring img {
+      display: inline-block;
+      height: 3rem;
+      width: 3rem;
+    }
+    .grass img {
+      display: inline-block;
+      height: 1.2rem;
+      width: 1.2rem;
+    }
+    .mobile-team-introduce, .mobile-company-offers {
+      margin-left: $left;
+      margin-right: $left;
+      margin-top: $section-top;
+    }
+    .mobile-team-introduce h4 {
+      color: rgb(27, 156, 164);
+    }
+    .p-center, .mailbox {
+      text-align: center;
+    }
+    .mobile-star section {
+      max-width: 100%;
+      vertical-align: middle;
+      display: inline-block;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+    .recruitment img {
+      margin-top: 1rem;
+      width: 100%;
+      height: auto;
+    }
+    .job{
+      background:#F0F0F0;
+      margin: 0.4rem;
+      border-radius: 0.3rem;
+      .job-title{
+        display: flex;
+        .line{
+          width: 0.4rem;
+          height: 2rem;
+          background: #FCBB21;
+          margin-top: 0.5rem;
+        }
+        .title{
+          font-family: 'Microsoft Yahei', serif;
+          font-size: 0.7rem;
+          color: #323232;
+          margin: 0.5rem 0 0 0.4rem;
+          display: flex;
+          align-items: center;
+        }
+      }
+      .sec-title{
+        display: flex;
+        margin-top: 0.4rem;
+        .round{
+          width: 1.1rem;
+          height: 1.1rem;
+          background: #FCBB21;
+          border-radius: 0.3rem;
+          margin:0 0.4rem 0 0.9rem ;
+          color: #ffffff;
+        }
+        .advantage{
+          font-family: 'Microsoft Yahei', serif;
+          font-size: 0.6rem;
+          font-weight: bold;
+          color: #323232;
+          margin: 0;
+          display: flex;
+          align-items: center;
+        }
+      }
+      .job-content{
+        width:80%;
+        text-align: left;
+        margin-left: 2rem;
+        p{
+          font-size: 0.7rem;
+        }
+      }
+
+
+
+
+
+
+    }
+    .mailbox {
+      margin-top: 1rem;
+      color: rgb(75, 101, 98);
+    }
+  }
+}
+

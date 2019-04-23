@@ -1,0 +1,176 @@
+@charset "utf-8";
+@import "base";
+
+.swiper-wrapper {
+  .swiper-button-next {
+    right: 5%;
+  }
+
+  .swiper-button-prev {
+    left: 5%;
+  }
+}
+
+
+/*pc头部banner*/
+.pc-about {
+  height: $pc-height;
+  @include bg-lazy-loading;
+}
+
+/*手机端banner*/
+.phone-about {
+  height: $phone-height;
+  @include bg-lazy-loading;
+}
+
+/*pc端图片*/
+main {
+  .swiper-button-next {
+    background: url("../img/new-about/pc-arrow.png") no-repeat center;
+  }
+
+  .swiper-button-prev {
+    background: url("../img/new-about/pc-arrow.png") no-repeat center;
+    transform: rotate(180deg);
+  }
+}
+
+/*手机端图片*/
+main {
+  .content-title {
+    width: 55%;
+  }
+
+  .mobile-join {
+    @include center;
+
+    .mobile-joinUs-btn {
+      width: 7.42rem;
+      // height: 2rem;
+    }
+  }
+}
+
+.content-title {
+  width: 45%;
+  margin-top: 0.9rem;
+  padding-bottom: .48rem;
+  font-size: .69rem;
+  letter-spacing: 0.05rem;
+  text-align: center;
+  border-bottom: .05rem solid #E3BA4F;
+  font-family: 'SourceHanSansCN-Medium';
+}
+
+.join-btn {
+  margin-top: 0.9rem;
+}
+
+.content-pic .text {
+  text-align: center;
+  margin: 0.15rem 0;
+}
+
+.content-pic .text p {
+  line-height: 0.4rem;
+  font-size: 0.24rem;
+  letter-spacing: 0.05rem;
+  font-family: 'Microsoft Yahei', serif;
+}
+
+.pc-joinUs-btn {
+  text-align: center;
+  font-size: 0.30rem;
+  line-height: 0.84rem;
+  height: 0.84rem;
+  width: 3.11rem;
+  font-weight: 600;
+  display: inline-block;
+  color: #fdb801;
+  font-family: "Arial", serif;
+  letter-spacing: 0.04rem;
+  border: #fdb801 solid 0.02rem;
+
+  &:hover {
+    color: #fdb801;
+  }
+}
+
+@media (max-width: 992px) {
+  .content-title {
+    width: 29%;
+    margin: 0.9rem 0;
+  }
+
+  .content-pic .text {
+    text-align: center;
+    margin: 0.15rem 1rem;
+  }
+
+  .content-pic .text p {
+    text-indent: 2em;
+    text-align: left;
+    line-height: 1rem;
+    height: auto;
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+    font-family: 'Microsoft Yahei', serif;
+  }
+
+  .content-pic .m-address p {
+    text-align: center;
+  }
+}
+
+.slider-container {
+  margin: 0.45rem 0;
+  width: 50%;
+}
+
+.content-pic {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  @media(max-width: 992px) {
+    margin-top: 6px;
+  }
+
+  .content-pic-wrapper {
+    width: 82%;
+
+    img {
+      margin-bottom: .4rem;
+
+      &:last-child {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+}
+
+.content-pic .pc-time-line {
+  width: 85%;
+}
+
+.content-pic .m-time-line {
+  width: 90%;
+}
+
+.content-pic img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+.pc-join-btn {
+  width: 40% !important;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 1rem;
+}

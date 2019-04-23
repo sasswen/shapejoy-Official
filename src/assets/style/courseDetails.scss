@@ -1,0 +1,305 @@
+@charset "utf-8";
+@import "base";
+
+/* 公共背景设置 */
+.setCurrentBackground{
+  background: no-repeat center;
+  background-size: cover;
+}
+
+.course-details {
+  .course-describe {
+    z-index: 2;
+    width: 370px;
+    height: auto;
+    color: #fff;
+    position: absolute;
+    bottom: 0.4rem;
+    left: 2.3rem;
+
+    .name {
+      font-size: 30px;
+    }
+
+    .describe {
+      line-height: 26px;
+    }
+
+    .describe,
+    .level-duration {
+      font-size: 14px;
+    }
+
+    .level-duration {
+      height: 30px;
+      // width: 170px;
+      padding: 0 13px;
+      background: #DEDEDE;
+      border-radius: 2px;
+      // text-align: center;
+      display: inline-block;
+      p {
+        height: 30px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        color: #131419;
+      }
+    }
+  }
+}
+
+/* 课程详情封面 && 介绍 */
+.pc-course-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.pc-detail:after, .phone-detail:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-color: #000000;
+  opacity: 0.3;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+
+@media only screen and (min-width: 1201px) {
+
+  /*pc头部背景*/
+  .pc-detail {
+    width: 100%;
+    height: $pc-height;
+    position: relative;
+  }
+
+
+  .course-content {
+    margin-top: 0.2rem;
+    position: relative;
+
+    p {
+      height: 20px;
+      line-height: 20px;
+      font-size: 16px;
+      letter-spacing: 0.02rem;
+      width: 53.75%;
+      padding: 0;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .coursers-covers-list {
+    width: 53.75%;
+    margin: 0 auto;
+    padding: 0;
+
+    ul {
+      // overflow: hidden;
+      &:after{
+        content: '';
+        clear: both;
+      }
+      margin: 0;
+      li {
+        float: left;
+        // margin-left: 0.2rem;
+        // margin-top: 0.05rem;
+        // width: 220px;
+        width: 32.66%;
+        margin-left: 1%;
+        margin-bottom: .1rem;
+        &:nth-child(3n+1){
+          margin: 0;
+        }
+        img {
+          height: auto;
+          width: 100%;
+          visibility: hidden;
+        }
+        div {
+          height: 1.85rem;
+          width: 100%;
+          // background-size: 100% 100% !important;
+          background-size: cover;
+        }
+        p {
+          height: 40px;
+          line-height: 40px;
+          width: 100%;
+          text-align: center;
+          font-family: "SimHei";
+          font-size: 14px;
+          letter-spacing: 1px;
+          color: #4D4D4D;
+          background: #fff;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+
+  /* 使用shapejoyp */
+  .use-shapjoy {
+    margin-top: 0.1rem;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 1.2rem;
+
+    p {
+      height: 100%;
+      line-height: 30px;
+      color: RGBA(187, 187, 187, 1);
+      font-family: "SimHei";
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+
+  /* 手机样式 */
+  /* 课程样式 */
+  .phone-detail {
+    width: 100%;
+    height: $phone-height;
+    position: relative;
+
+    .course-describe {
+      z-index: 2;
+      width: 16rem;
+      height: auto;
+      color: #fff;
+      position: absolute;
+      bottom: 0.4rem;
+      left: 1rem;
+
+      .name {
+        font-size: 1rem;
+      }
+
+      .describe {
+        font-size: 0.7rem;
+        line-height: 0.8rem;
+      }
+
+      .level-duration {
+        height: 1.5rem;
+        // width: 9rem;
+        padding: 0 .1rem;
+        font-size: 0.7rem;
+        text-align: center;
+        p {
+          line-height: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .phone-courses-title {
+    margin-top: 0.52rem;
+    margin-bottom: 0.8rem;
+    position: relative;
+    height: 0.8rem;
+    width: 100%;
+
+    p {
+      position: absolute;
+      left: 1rem;
+      color: #3E3E3E;
+      font-family: "SimHei";
+      font-size: 14px;
+      letter-spacing: 0.02rem;
+    }
+  }
+
+  /* 手机动作封面 */
+  .phone-courses-list {
+    ul li {
+      width: 8rem;
+      float: left;
+      margin-left: 0.4rem;
+    }
+
+    ul li div {
+      height: 4.5rem;
+      width: 100%;
+      background-size: 100% 100% !important;
+    }
+
+    ul li p {
+      height: 1.6rem;
+      line-height: 1.6rem;
+      width: 100%;
+      text-align: center;
+      font-family: "SimHei";
+      font-size: 0.3rem;
+      letter-spacing: 1px;
+      color: #4D4D4D;
+      background: #fff;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      box-shadow: 0px 1px 1px #ededed00;
+      margin-top: 0;
+    }
+  }
+
+  /* phone 底部文字描述 */
+  .phone-courses-bottom-word {
+    margin-top: 1rem;
+    height: 0.76rem;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 4rem;
+  }
+
+  .phone-courses-bottom-word p {
+    color: #929292;
+    font-family: "SimHei";
+    font-size: 0.56rem;
+    letter-spacing: 0.04rem;
+    left: 5.6rem;
+  }
+}
+.action-video-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  .action-video-shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.3);
+  }
+  .action-video {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &.pc {
+      width: 53.75%;
+    }
+    &.mobile {
+      width: 90%;
+    }
+  }
+}

@@ -1,0 +1,366 @@
+@charset "utf-8";
+@import "base";
+
+$pc-banner-height: 11rem;
+$phone-banner-height: 22rem;
+@font-face {
+  font-family: PangMenZhengDao;
+  src: url(http://static.officialsite.shapejoy.com/fonts/PangMenZhengDao.ttf);
+}
+
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.pc-bg-wrap {
+  width: 100%;
+  position: relative;
+  height: 10.8rem;
+  .carousel-list {
+    position: absolute;
+    bottom: 3%;
+    z-index: 99;
+    width: 100%;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    .book-mark {
+      position: absolute;
+      width: 0.5rem;
+      height: 0.5rem;
+      left: 5%;
+      @include bg('http://static.officialsite.shapejoy.com/img/phone-img/label.png')
+    }
+    .carousel-inner {
+      width: 100%;
+      margin-left: 1.8rem;
+      text-align: left;
+      a{
+        width: 13rem;
+        font-size: 0.4rem;
+        color: #ffffff;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+  }
+}
+
+.swiper-button-prev {
+  background: url("../../assets/img/new-about/pc-arrow.png") no-repeat center !important;
+  transform: rotate(180deg);
+}
+
+.swiper-button-next {
+  background: url("../../assets/img/new-about/pc-arrow.png") no-repeat center !important;
+}
+
+/* 首页文字跑马灯start */
+
+/*pc phone图片背景*/
+main .understand-more,
+main .characteristics-introduce,
+main .action-result,
+main .phone-people-sport,
+main .phone-characteristics-introduce,
+main .phone-rank-bg,
+main .phone-five-train {
+  width: 100%;
+}
+
+.understand-more {
+  height: 10rem;
+}
+
+.characteristics-introduce {
+  height: 12rem;
+}
+
+.action-result {
+  height: 12rem;
+}
+
+/*pc海量课程随心选(这里不能懒加载，因为有点击事件)*/
+
+.pc-people01 {
+  @include bg('../img/pc-img/pc-people01.jpg');
+}
+.pc-people02 {
+  @include bg('../img/pc-img/pc-people02.jpg');
+}
+
+.pc-people03 {
+  @include bg('../img/pc-img/pc-people03.jpg');
+}
+
+.pc-people04 {
+  @include bg('../img/pc-img/pc-people04.jpg');
+}
+
+.pc-people05 {
+  @include bg('../img/pc-img/pc-people05.jpg');
+}
+
+.phone-bg-wrap {
+  width: 100%;
+  position: relative;
+  .carousel-list {
+    position: absolute;
+    top: 90%;
+    z-index: 99;
+    width: inherit;
+    height: 1rem;
+    line-height: 1rem;
+    background-color:rgba(0, 0, 0, 0.25);
+    .book-mark {
+      position: absolute;
+      width: 0.9rem;
+      height: 0.9rem;
+      left: 4%;
+      @include bg('http://static.officialsite.shapejoy.com/img/phone-img/label.png');
+    }
+    .carousel-inner {
+      width: 80%;
+      height: 1rem;
+      margin-left: 2rem;
+      text-align: left;
+      a {
+        width: 100%;
+        font-size: 0.7rem;
+        color: #ffffff;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+/*手机端背景图*/
+.phone-people-sport {
+  height: 15rem;
+}
+
+.phone-characteristics-introduce {
+  height: 12rem;
+}
+
+.phone-rank-bg {
+  height: 29rem;
+}
+
+/*手机端海量课程*/
+.phone-five-train .phone-people{
+  position: relative;
+  display: block;
+  margin-left: 2%;
+  width: 96%;
+  height: 4.36rem;
+  line-height: 4.36rem;
+  background: no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #fff;
+  font-family: "PangMenZhengDao";
+}
+
+/* main  */
+main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+main .courses-3D {
+  height: 3.5rem;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+main .courses-3D .courses-word {
+  letter-spacing: 0.04rem;
+  color: #151515;
+  padding-top: 0.7rem;
+  font-family: "Arial";
+  font-weight: bold;
+}
+
+main .courses-3D .line-yellow {
+  height: 0.07rem;
+  width: 0.65rem;
+  background-color: #fdb801;
+  margin-left: 48%;
+  margin-top: 0.04rem;
+}
+
+main .courses-3D .vision-3D {
+  letter-spacing: 0.10rem;
+  margin-top: 0.04rem;
+  color: #fdb801;
+  font-family: "SourceHanSansCN-Medium";
+}
+
+main .pc-five-train {
+  position: relative;
+  width: 100%;
+  height: 5.8rem;
+}
+
+main .pc-five-train ul {
+  height: 100%;
+  width: 62.5%;
+  margin-left: 18.75%;
+  overflow: hidden;
+}
+
+main .pc-five-train ul li {
+  position: relative;
+  height: 5.8rem;
+  width: 20%;
+  float: left;
+  &:hover {
+    a {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,.4);
+      cursor: pointer;
+      text-decoration: none;
+      &:active{
+        color: #fff;
+      }
+    }
+  }
+  a {
+    display: none;
+    color: #fff;
+    font-family: "PangMenZhengDao";
+    font-size: 0.28rem;
+    letter-spacing: 0.032rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+main .pc-five-train ul li img {
+  height: 100%;
+  width: 100%;
+}
+
+main .pc-five-train .prev,
+main .pc-five-train .next {
+  position: absolute;
+  height: 100%;
+  width: 12.5%;
+  cursor: pointer;
+}
+
+main .pc-five-train .prev img {
+  left: 55%;
+}
+
+main .pc-five-train .prev img,
+main .pc-five-train .next img {
+  height: 1.32rem;
+  width: 0.65rem;
+  position: absolute;
+  top: 2.23rem;
+}
+
+main .pc-five-train .next img {
+  right: 55%;
+}
+
+main .pc-five-train .next {
+  top: 0;
+  right: 6.235%;
+}
+
+main .pc-five-train .prev {
+  left: 6.235%;
+}
+
+/* pc && phone {more 字体样式} */
+
+main .pc-more-btn {
+  text-align: center;
+  border: #fdb801 solid 0.02rem;
+}
+
+main .phone-more-btn {
+  text-align: center;
+  border: #fdb801 solid 0.06rem;
+}
+
+main .pc-more-btn a:link,
+main .phone-more-btn a:link {
+  text-decoration: none;
+}
+
+main .pc-more-btn a,
+main .phone-more-btn a {
+  display: inline-block;
+  color: #fdb801;
+  font-family: SourceHanSansCN-Medium;
+  height: 100%;
+  width: 100%;
+  letter-spacing: 0.04rem;
+}
+
+main .pc-more-btn {
+  font-size: 0.30rem;
+  line-height: 0.54rem;
+  height: 0.54rem;
+  width: 2.4rem;
+  font-weight: 600;
+  margin: 0.4rem auto;
+  text-align: center;
+  border-radius: 0.27rem;
+}
+
+/* 手机按钮 */
+
+main .phone-more-btn {
+  width: 7.42rem;
+  height: 2rem;
+  // margin-left: 6rem;
+  margin: 2rem auto;
+  line-height: 2rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+}
+
+/**
+ *首页手机css
+ *利用boostrap 控制不同的样式的显示
+ */
+
+/* 手机导航底部文字 */
+
+header .guide .heard-list {
+  position: absolute;
+  bottom: 0.95rem;
+  left: 1.9rem;
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: none;
+}
+
+header .guide .heard-list a {
+  color: #fff;
+  font-size: 0.56rem;
+  letter-spacing: 0.1rem;
+  font-family: "SourceHanSansCN-Medium";
+}
+
