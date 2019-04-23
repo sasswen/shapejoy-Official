@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    test-page
     <CommentTopNav :href="href"/>
     <div @click="hidePhoneNav(false)" v-if="ajaxFinish">
       <router-view/>
