@@ -14,8 +14,7 @@ install:
 
 #清除 生成
 script:
-  - hexo clean  
-  - hexo g
+  - npm run build:pro
 
 after_script:
   - cd ./public
@@ -23,15 +22,15 @@ after_script:
   - git config user.name 
 
  "username"
-  - git config user.email "useremail"
-  - git add .
-  - git commit -m "update"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF 
+  - git config user.email "962041678@qq.com"
+  - git add . 
+  - git commit -m "update"      
+  - git push --force --quiet https://github.com/sasswen/shapejoy-Official.git
 
 }" master:master
-  #- git push --force --quiet "https://${GH_TOKEN}@$ 
+  #- git push --force --quiet https://github.com/sasswen/shapejoy-Official.git
 
-{你得项目地址(如果源码跟发布的不在一个分支 这里是分发布用的分支地址)，不带https}" master:master
+{你得项目地址(如果源码跟发布的不在一个分支 这里是分发布用的分支地址)，不带https} master:master
 
 #默认一个分支可以忽略此配置--监视github仓库中的master分支，分支出现变化就执行build
 #branches:
