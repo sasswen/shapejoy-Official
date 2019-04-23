@@ -8,4 +8,4 @@ install:
 
 #清除 生成
 script:
-  - npm run build:exam
+  - hexo g
