@@ -17,8 +17,10 @@ script:
 after_success:
 - cd ./dist
 - git init
-- git add --all .
-- git commit -m "Travis CI Auto Builder"
-# 这里的 REPO_TOKEN 即之前在 travis 项目的环境变量里添加的
-- git push --quiet --force https://github.com/sasswen/gitPartice.git
-  master
+# 添加自己的项目
+- git remote add origin git@github.com:sasswen/gitPartice.git
+# 新建并切换分支
+- git checkout --orphan source
+- git add -A
+- git commit -m "Travis CI"
+- git push
