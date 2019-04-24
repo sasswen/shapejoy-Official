@@ -7,10 +7,8 @@ branches:
   - master
     
 before_install:
-- npm install -g npm
 - git config --global user.name "sasswen"
 - git config --global user.email "962041678@qq.com"
-- npm install -g hexo-cli
 
 #安装hexo及插件
 install:
