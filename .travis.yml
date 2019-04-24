@@ -9,7 +9,7 @@ before_install:
 
 #安装hexo及插件
 install:
-  - npm install  
+  - cnpm install  
 
 #清除 生成
 script:
