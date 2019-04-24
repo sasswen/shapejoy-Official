@@ -8,11 +8,11 @@ before_install:
 
 #安装hexo及插件
 install:
-- npm install
+yarn
 
 #清除 生成
 script:
-  - npm run build:pro
+- npm run build:pro
 
 after_success:
 - cd ./dist
