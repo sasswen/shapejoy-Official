@@ -1,19 +1,5 @@
-
 language: node_js
 node_js: stable
-
-branches:
-  only:
-  - master
-    
-before_install:
-- git config --global user.name "sasswen"
-- git config --global user.email "962041678@qq.com"
-
-#安装hexo及插件
-install:
-- npm install
-
-#清除 生成
-script:
-- npm run build:pro
+script: npm run build:pro
+notifications:
+  email: false
